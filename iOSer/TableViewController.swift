@@ -183,6 +183,14 @@ class TableViewController: UITableViewController, UISearchDisplayDelegate{
             $0.siteName.rangeOfString(searchString) != nil
         }
         
+        var arr = englishSiteLite.filter(){
+            $0.siteName.rangeOfString(searchString) != nil
+        }
+        
+        for index in 0 ..< arr.count
+        {
+            fliteredSiteNames.append(arr[index] as SiteModel)
+        }
         // Same as below
         
 //        fliteredSiteNames = chineseSiteList.filter({(model : SiteModel) -> Bool in

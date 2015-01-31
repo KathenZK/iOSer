@@ -39,7 +39,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.hidden = true
+        self.navigationController?.navigationBar.hidden = true
         
     }
     

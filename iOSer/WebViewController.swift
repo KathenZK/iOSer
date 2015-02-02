@@ -40,7 +40,8 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.hidden = true
-        
+        navigationController?.navigationBar.barTintColor = UIColor(red: 35/255.0, green: 156/255.0, blue: 237/255.0, alpha: 1.0)
+
     }
     
     func addWebViewAndLoadData(str: String)

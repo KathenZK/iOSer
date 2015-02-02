@@ -16,6 +16,7 @@
 		0447A82D1A75FFC600DE77EF /* SiteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0447A82C1A75FFC600DE77EF /* SiteModel.swift */; };
 		0447A82F1A7613FA00DE77EF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0447A82E1A7613FA00DE77EF /* TableViewController.swift */; };
 		04493C531A7646A9006ACF91 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04493C521A7646A9006ACF91 /* WebViewController.swift */; };
+		046E84721A7E222500B7B38A /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E84711A7E222500B7B38A /* AddViewController.swift */; };
 		04E879EA1A79279A00D02F2F /* EnglishSite.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04E879E91A79279A00D02F2F /* EnglishSite.plist */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		0447A82C1A75FFC600DE77EF /* SiteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiteModel.swift; sourceTree = "<group>"; };
 		0447A82E1A7613FA00DE77EF /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		04493C521A7646A9006ACF91 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		046E84711A7E222500B7B38A /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		04E879E51A767A1900D02F2F /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		04E879E91A79279A00D02F2F /* EnglishSite.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EnglishSite.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 				0447A82C1A75FFC600DE77EF /* SiteModel.swift */,
 				0447A82E1A7613FA00DE77EF /* TableViewController.swift */,
 				04493C521A7646A9006ACF91 /* WebViewController.swift */,
+				046E84711A7E222500B7B38A /* AddViewController.swift */,
 				042C43821A75D18200CAD2AD /* Main.storyboard */,
 				042C43851A75D18200CAD2AD /* Images.xcassets */,
 				042C43871A75D18200CAD2AD /* LaunchScreen.xib */,
@@ -228,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046E84721A7E222500B7B38A /* AddViewController.swift in Sources */,
 				0447A82F1A7613FA00DE77EF /* TableViewController.swift in Sources */,
 				042C437F1A75D18200CAD2AD /* AppDelegate.swift in Sources */,
 				04493C531A7646A9006ACF91 /* WebViewController.swift in Sources */,

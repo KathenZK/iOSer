@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aHl-Z4-Qit">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="aHl-Z4-Qit">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--iOSer-->
@@ -34,7 +35,14 @@
                             <outlet property="delegate" destination="6KR-QX-L9e" id="eqd-sk-WtK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="iOSer" id="pov-Q7-cQQ"/>
+                    <navigationItem key="navigationItem" title="iOSer" id="pov-Q7-cQQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="V4F-8P-oz0">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="EVC-7I-tgw" kind="modal" identifier="add" modalTransitionStyle="flipHorizontal" id="Nyz-4D-9Lh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="MMi-Af-m2R" id="UQ2-Mh-lpD"/>
                     </connections>
@@ -51,6 +59,52 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1266" y="852"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="tvN-3Q-7mp">
+            <objects>
+                <viewController id="EVC-7I-tgw" customClass="AddViewController" customModule="iOSer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hLh-hI-cbb"/>
+                        <viewControllerLayoutGuide type="bottom" id="1w4-yt-W32"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L6l-Is-m8P">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PR5-3x-D0D">
+                                <rect key="frame" x="16" y="20" width="288" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="ZdZ-bw-6gf"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="中文"/>
+                                    <segment title="英文"/>
+                                </segments>
+                                <color key="tintColor" red="0.71364500661375663" green="0.71364500661375663" blue="0.71364500661375663" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hw5-ZD-ABC">
+                                <rect key="frame" x="146" y="358" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backOrAddData:" destination="EVC-7I-tgw" eventType="touchUpInside" id="BWF-H1-bEP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="PR5-3x-D0D" secondAttribute="centerX" id="7eX-WR-c8Y"/>
+                            <constraint firstItem="PR5-3x-D0D" firstAttribute="leading" secondItem="L6l-Is-m8P" secondAttribute="leadingMargin" id="BVJ-Fw-ZMP"/>
+                            <constraint firstItem="PR5-3x-D0D" firstAttribute="top" secondItem="hLh-hI-cbb" secondAttribute="bottom" id="hxM-6v-Lmk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PR5-3x-D0D" secondAttribute="trailing" id="lny-XD-KRe"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wuH-bu-5tY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1647" y="852"/>
         </scene>
         <!--国外-->
         <scene sceneID="ieQ-2w-fyq">

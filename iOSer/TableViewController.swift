@@ -180,24 +180,18 @@ class TableViewController: UITableViewController, UISearchDisplayDelegate{
     {
         
         fliteredSiteNames = chineseSiteList.filter(){
-            $0.siteName.rangeOfString(searchString) != nil
+            ($0.siteName.lowercaseString).rangeOfString(searchString.lowercaseString) != nil
         }
         
         var arr = englishSiteLite.filter(){
-            $0.siteName.rangeOfString(searchString) != nil
+            ($0.siteName.lowercaseString).rangeOfString(searchString.lowercaseString) != nil
         }
         
         for index in 0 ..< arr.count
         {
             fliteredSiteNames.append(arr[index] as SiteModel)
         }
-        // Same as below
-        
-//        fliteredSiteNames = chineseSiteList.filter({(model : SiteModel) -> Bool in
-//            let stringMatch = model.siteName.rangeOfString(searchString)
-//            return stringMatch != nil
-//        })
-        return true
+            return true
     }
 
 }

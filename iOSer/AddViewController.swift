@@ -10,6 +10,10 @@ import UIKit
 
 class AddViewController: UIViewController {
 
+    @IBOutlet weak var siteName: UITextField!
+    
+    @IBOutlet weak var siteUrl: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +30,11 @@ class AddViewController: UIViewController {
         
         self.dismissViewControllerAnimated(true, completion: nil)
         
+    }
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        siteName.resignFirstResponder()
+        siteUrl.resignFirstResponder()
     }
     /*
     // MARK: - Navigation

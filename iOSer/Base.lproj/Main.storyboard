@@ -90,6 +90,7 @@
                                 </state>
                                 <connections>
                                     <action selector="backOrAddData:" destination="EVC-7I-tgw" eventType="touchUpInside" id="BWF-H1-bEP"/>
+                                    <action selector="saveBtnClicked:" destination="EVC-7I-tgw" eventType="touchUpInside" id="AnJ-gl-gRq"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="网   址：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHB-HS-mGV">
@@ -123,6 +124,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
+                        <color key="backgroundColor" red="0.77768405549999997" green="0.81776977709999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="PR5-3x-D0D" secondAttribute="centerX" id="7eX-WR-c8Y"/>
                             <constraint firstItem="PR5-3x-D0D" firstAttribute="leading" secondItem="L6l-Is-m8P" secondAttribute="leadingMargin" id="BVJ-Fw-ZMP"/>

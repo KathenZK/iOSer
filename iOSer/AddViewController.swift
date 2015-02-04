@@ -36,6 +36,11 @@ class AddViewController: UIViewController {
         siteName.resignFirstResponder()
         siteUrl.resignFirstResponder()
     }
+    
+    @IBAction func saveBtnClicked(sender: UIButton) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 

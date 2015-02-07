@@ -38,6 +38,8 @@ class AddViewController: UIViewController {
     }
     
     @IBAction func saveBtnClicked(sender: UIButton) {
+//        siteName.text;
+//        siteUrl.text;
         
     }
     

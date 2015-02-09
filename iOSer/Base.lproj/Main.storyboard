@@ -61,7 +61,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1266" y="852"/>
+            <point key="canvasLocation" x="1289" y="852"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="tvN-3Q-7mp">
@@ -87,8 +87,8 @@
                                 <color key="tintColor" red="0.71364500661375663" green="0.71364500661375663" blue="0.71364500661375663" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hw5-ZD-ABC">
-                                <rect key="frame" x="146" y="358" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="146" y="358" width="30" height="30"/>
+                                <state key="normal" title="添加">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -127,7 +127,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.77768405549999997" green="0.81776977709999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="PR5-3x-D0D" secondAttribute="centerX" id="7eX-WR-c8Y"/>
                             <constraint firstItem="PR5-3x-D0D" firstAttribute="leading" secondItem="L6l-Is-m8P" secondAttribute="leadingMargin" id="BVJ-Fw-ZMP"/>

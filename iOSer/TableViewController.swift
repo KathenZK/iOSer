@@ -40,7 +40,6 @@ class TableViewController: UITableViewController, UISearchDisplayDelegate{
     {
         var plistPath = NSBundle.mainBundle().pathForResource("ChineseSite", ofType: "plist")
         var data = NSArray(contentsOfFile: plistPath!)
-//        println(data![0])
         for dic in data!
         {
             var site = SiteModel(dic: dic as NSDictionary);
@@ -49,7 +48,6 @@ class TableViewController: UITableViewController, UISearchDisplayDelegate{
         
         var plistPath2 = NSBundle.mainBundle().pathForResource("EnglishSite", ofType: "plist")
         var data2 = NSArray(contentsOfFile: plistPath2!)
-//        println(data2![0])
         for dic in data2!
         {
             var site = SiteModel(dic: dic as NSDictionary);

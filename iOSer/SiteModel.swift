@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 ZK. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class SiteModel: NSObject {
    

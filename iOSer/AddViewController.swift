@@ -10,36 +10,40 @@ import UIKit
 
 class AddViewController: UIViewController {
 
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
     @IBOutlet weak var siteName: UITextField!
     
     @IBOutlet weak var siteUrl: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    @IBAction func backOrAddData(sender: UIButton) {
-        
-        self.dismissViewControllerAnimated(true, completion: nil)
-        
-    }
-    
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         siteName.resignFirstResponder()
         siteUrl.resignFirstResponder()
     }
     
     @IBAction func saveBtnClicked(sender: UIButton) {
-//        siteName.text;
-//        siteUrl.text;
+        
+        var tableVC : TableViewController = TableViewController()
+        var model : SiteModel = SiteModel(id: "1", siteName: siteName.text, siteURL: siteUrl.text)
+        
+        if segmentedControl.selectedSegmentIndex == 0
+        {
+            println(0)
+            tableVC.chineseSiteList.append(model)
+    
+        }
+        else
+        {
+            println(1)
+            tableVC.englishSiteLite.append(model)
+        }
+        
+//        tableVC.tableView.reloadData()
+        self.dismissViewControllerAnimated(true, completion: nil)
         
     }
     

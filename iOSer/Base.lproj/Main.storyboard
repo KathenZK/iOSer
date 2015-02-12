@@ -46,6 +46,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="RTz-YN-dqa">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                     <connections>
                         <outlet property="searchDisplayController" destination="MMi-Af-m2R" id="UQ2-Mh-lpD"/>
                     </connections>
@@ -75,6 +78,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="center" fixedFrame="YES" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="hI0-jH-eRG">
+                                <rect key="frame" x="4" y="88" width="320" height="480"/>
+                            </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PR5-3x-D0D">
                                 <rect key="frame" x="16" y="20" width="288" height="44"/>
                                 <constraints>
@@ -84,46 +90,46 @@
                                     <segment title="中文"/>
                                     <segment title="英文"/>
                                 </segments>
-                                <color key="tintColor" red="0.71364500661375663" green="0.71364500661375663" blue="0.71364500661375663" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hw5-ZD-ABC">
-                                <rect key="frame" x="146" y="358" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hw5-ZD-ABC">
+                                <rect key="frame" x="146" y="354" width="36" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="添加">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="backOrAddData:" destination="EVC-7I-tgw" eventType="touchUpInside" id="BWF-H1-bEP"/>
                                     <action selector="saveBtnClicked:" destination="EVC-7I-tgw" eventType="touchUpInside" id="AnJ-gl-gRq"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="网   址：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHB-HS-mGV">
                                 <rect key="frame" x="31" y="194" width="66" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F8c-nJ-oQ4">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入网站名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F8c-nJ-oQ4">
                                 <rect key="frame" x="97" y="93" width="180" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="KJR-Kb-2Ct"/>
                                     <constraint firstAttribute="width" constant="180" id="pJi-D9-emx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="网站名：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYO-LA-NU3">
                                 <rect key="frame" x="31" y="102" width="68" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4M0-Iv-OlS">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入该网站网址" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4M0-Iv-OlS">
                                 <rect key="frame" x="97" y="185" width="180" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="WDz-kQ-uwP"/>
                                     <constraint firstAttribute="height" constant="40" id="j2j-Wu-QSE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -132,14 +138,17 @@
                             <constraint firstAttribute="centerX" secondItem="PR5-3x-D0D" secondAttribute="centerX" id="7eX-WR-c8Y"/>
                             <constraint firstItem="PR5-3x-D0D" firstAttribute="leading" secondItem="L6l-Is-m8P" secondAttribute="leadingMargin" id="BVJ-Fw-ZMP"/>
                             <constraint firstItem="F8c-nJ-oQ4" firstAttribute="top" secondItem="PR5-3x-D0D" secondAttribute="bottom" constant="30" id="Bge-SF-Oda"/>
+                            <constraint firstItem="hw5-ZD-ABC" firstAttribute="leading" secondItem="L6l-Is-m8P" secondAttribute="leading" constant="146" id="Sdl-lI-fWE"/>
                             <constraint firstItem="F8c-nJ-oQ4" firstAttribute="leading" secondItem="L6l-Is-m8P" secondAttribute="leadingMargin" constant="81" id="SnB-1J-7Wv"/>
                             <constraint firstItem="4M0-Iv-OlS" firstAttribute="top" secondItem="F8c-nJ-oQ4" secondAttribute="bottom" constant="52" id="UmE-bC-BxJ"/>
+                            <constraint firstItem="1w4-yt-W32" firstAttribute="top" secondItem="hw5-ZD-ABC" secondAttribute="bottom" constant="180" id="WZ7-UN-Bf3"/>
                             <constraint firstItem="PR5-3x-D0D" firstAttribute="top" secondItem="hLh-hI-cbb" secondAttribute="bottom" id="hxM-6v-Lmk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PR5-3x-D0D" secondAttribute="trailing" id="lny-XD-KRe"/>
                             <constraint firstItem="4M0-Iv-OlS" firstAttribute="leading" secondItem="L6l-Is-m8P" secondAttribute="leadingMargin" constant="81" id="p23-p6-WMO"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="segmentedControl" destination="PR5-3x-D0D" id="ZsM-XT-JlI"/>
                         <outlet property="siteName" destination="F8c-nJ-oQ4" id="miB-qA-lmg"/>
                         <outlet property="siteUrl" destination="4M0-Iv-OlS" id="7Ei-sw-iL2"/>
                     </connections>
@@ -166,6 +175,9 @@
             <point key="canvasLocation" x="734" y="852"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LaunchImage" width="320" height="480"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

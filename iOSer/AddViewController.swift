@@ -27,34 +27,24 @@ class AddViewController: UIViewController {
     
     @IBAction func saveBtnClicked(sender: UIButton) {
         
-        var tableVC : TableViewController = TableViewController()
-        var model : SiteModel = SiteModel(id: "1", siteName: siteName.text, siteURL: siteUrl.text)
+        var temDic : Dictionary<String, String> = ["id":"1", "siteName":siteName.text, "siteURL":siteUrl.text]
         
         if segmentedControl.selectedSegmentIndex == 0
         {
-            println(0)
-            tableVC.chineseSiteList.append(model)
-    
+            println("0")
+            var plistPath = NSBundle.mainBundle().pathForResource("ChineseSite", ofType: "plist")
+            var data = NSMutableArray(contentsOfFile: plistPath!)
+            data?.addObject(temDic);
+            data?.writeToFile(plistPath!, atomically: true)
         }
         else
         {
-            println(1)
-            tableVC.englishSiteLite.append(model)
+            println("1")
+            var plistPath2 = NSBundle.mainBundle().pathForResource("EnglishSite", ofType: "plist")
+            var data2 = NSMutableArray(contentsOfFile: plistPath2!)
+            data2?.addObject(temDic);
+            data2?.writeToFile(plistPath2!, atomically: true)
         }
-        
-//        tableVC.tableView.reloadData()
         self.dismissViewControllerAnimated(true, completion: nil)
-        
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

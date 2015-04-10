@@ -14,33 +14,25 @@
 		<key>id</key>
 		<string>1</string>
 		<key>siteName</key>
-		<string>NSHipster</string>
+		<string>CocoaControls</string>
 		<key>siteURL</key>
-		<string>http://nshipster.com</string>
+		<string>https://www.cocoacontrols.com</string>
 	</dict>
 	<dict>
 		<key>id</key>
 		<string>1</string>
 		<key>siteName</key>
-		<string>NSHipster</string>
+		<string>Appcoda</string>
 		<key>siteURL</key>
-		<string>http://nshipster.com</string>
+		<string>http://www.appcoda.com</string>
 	</dict>
 	<dict>
 		<key>id</key>
 		<string>1</string>
 		<key>siteName</key>
-		<string>NSHipster</string>
+		<string>Raywenderlich</string>
 		<key>siteURL</key>
-		<string>http://nshipster.com</string>
-	</dict>
-	<dict>
-		<key>id</key>
-		<string>1</string>
-		<key>siteName</key>
-		<string>NSHipster</string>
-		<key>siteURL</key>
-		<string>http://nshipster.com</string>
+		<string>http://www.raywenderlich.com</string>
 	</dict>
 </array>
 </plist>

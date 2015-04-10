@@ -17,8 +17,6 @@ class TableViewController: UITableViewController, UISearchDisplayDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        modelGetData()
         
         tableView.tableFooterView = UIView()
         
@@ -32,6 +30,10 @@ class TableViewController: UITableViewController, UISearchDisplayDelegate{
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.hidden = false
+        
+        chineseSiteList.removeAll(keepCapacity: false)
+        englishSiteLite.removeAll(keepCapacity: false)
+        modelGetData()
     }
     
     // MARK: - Model get data
